@@ -1,7 +1,19 @@
-<input [count]="maxi" type="text" placeholder="input" [(ngModel)]="myInput" />
+<!-- <form [formGroup]="myForm">
+  <input
+    [count]="maxi"
+    type="text"
+    placeholder="input"
+    formControlName="input1"
+  />
 
-<textarea
-  [count]="maxi"
-  placeholder="textarea"
-  [(ngModel)]="myTextarea"
-></textarea>
+  <textarea
+    [count]="maxi"
+    placeholder="textarea"
+    formControlName="textarea1"
+  ></textarea>
+</form> -->
+<button (click)="bool = !bool"> Change bool value</button>
+
+<p *appUnless="bool">Condition is {{bool}}</p>
+<p *appUnless="false">Condition is false</p>
+
